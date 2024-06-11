@@ -24,8 +24,8 @@ def calculate_unique_token_ratio(cleaned_data, B, D):
     return unique_token_num / token_num
 
 # 参数 B 和 D 的范围
-B_values = range(250, 20000, 4000)
-D_values = range(10, 200, 20)
+B_values = range(250, 22000, 2000)
+D_values = range(10, 210, 10)
 
 # 结果缓存文件路径
 cache_file = 'results_cache.pkl'
@@ -94,7 +94,7 @@ for B in B_values:
     axins.plot(subset['D'], subset['Ratio'], marker='o', label=f'B={B}')
 
 # 设置放大图的范围
-axins.set_xlim(130, 190)
+axins.set_xlim(110, 190)
 axins.set_ylim(0, 0.1)
 axins.set_yscale('linear')
 
