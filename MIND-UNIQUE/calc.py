@@ -36,8 +36,8 @@ def calculate_unique_token_ratio(cleaned_data, B, D):
     return unique_token_num / token_num
 
 # 参数 B 和 D 的范围
-B_values = range(1, 2001, 250)  # 1, 6, 11, 16
-D_values = range(1, 101, 10)  # 1, 3, 5, 7, 9
+B_values = range(250, 20000, 4000)  # 1, 6, 11, 16
+D_values = range(10, 200, 20)  # 1, 3, 5, 7, 9
 
 results = []
 
@@ -45,7 +45,7 @@ results = []
 for B in B_values:
     for D in D_values:
         ratios = []
-        for _ in range(10):
+        for _ in range(5):
             ratios.append(calculate_unique_token_ratio(cleaned_data, B, D))
         ratio = np.mean(ratios)
         results.append((B, D, ratio))
