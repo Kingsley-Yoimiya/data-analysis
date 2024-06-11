@@ -85,8 +85,8 @@ ax.legend(loc='upper right')
 from mpl_toolkits.axes_grid1.inset_locator import inset_axes, mark_inset
 
 # 创建放大图，放在主图外侧
-axins = inset_axes(ax, width="30%", height="40%", loc='center left',
-                   bbox_to_anchor=(1.1, 0.1, 0.7, 1), bbox_transform=ax.transAxes)
+axins = inset_axes(ax, width="15%", height="40%", loc='center left',
+                   bbox_to_anchor=(1.1, 0.1, 1.5, 1), bbox_transform=ax.transAxes)
 
 # 在放大图上绘制数据
 for B in B_values:
